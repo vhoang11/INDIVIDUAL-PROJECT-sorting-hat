@@ -1,0 +1,23 @@
+#sorted-students {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 0 1 30%;
+  padding: 20px;
+  margin: 30px;
+}
+
+img {
+  height: 650px;
+}
+
+#welcome {
+  display: block;
+  align-content: center;
+}
+
+#form {
+  width: 400px;
+}
