@@ -1,3 +1,7 @@
+/* body {
+  background-image: url("https://wallpaperaccess.com/full/5930405.jpg");
+} */
+
 #sorted-students {
   display: flex;
   flex-wrap: wrap;
@@ -13,11 +17,32 @@ img {
   height: 650px;
 }
 
-#welcome {
+#form-appear {
+  width: 400px;
   display: block;
-  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#form {
-  width: 400px;
+h1, h3 {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+#house-buttons {
+  display: flex;
+  justify-content: center;
+  background-color: lightgray;
+}
+
+#house-form {
+  display: flex;
+  justify-content: center;
+}
+
+#sort {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
