@@ -82,6 +82,20 @@ const filter = (array, houseName) => {
   return houseArray;
 }
 
+const btn = document.getElementById('sort');
+
+btn.addEventListener('click', () => {
+  const form = document.getElementById('form1');
+
+  if (form.style.display === 'none') {
+    // 👇️ this SHOWS the form
+    form.style.display = 'block';
+  } else {
+    // 👇️ this HIDES the form
+    form.style.display = 'none';
+  }
+});
+
 // Filter students by house
 const gryffindorButton = document.querySelector("#gryffindor");
 const hufflepuffButton = document.querySelector("#hufflepuff");
