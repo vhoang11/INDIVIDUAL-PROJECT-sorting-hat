@@ -82,6 +82,7 @@ const filter = (array, houseName) => {
   return houseArray;
 }
 
+//toggle for form to show and disappear
 const btn = document.getElementById('sort');
 
 btn.addEventListener('click', () => {
@@ -93,6 +94,18 @@ btn.addEventListener('click', () => {
   } else {
     // 👇️ this HIDES the form
     form.style.display = 'none';
+  }
+});
+
+btn.addEventListener('click', () => {
+  const cards = document.getElementById('sorted-students');
+
+  if (cards.style.display === 'none') {
+    // 👇️ this SHOWS the cards
+    cards.style.display = 'flex';
+  } else {
+    // 👇️ this HIDES the cards
+    cards.style.display = 'none';
   }
 });
 

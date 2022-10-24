@@ -2,6 +2,16 @@
   background-image: url("https://wallpaperaccess.com/full/5930405.jpg");
 } */
 
+@font-face {
+  font-family: "parry-hotter";
+  src: url(parry-hotter.regular.ttf);
+}
+
+@font-face {
+  font-family: "lumoslatino-font";
+  src: url(Lumoslatino-XA8K.ttf);
+}
+
 #sorted-students {
   display: flex;
   flex-wrap: wrap;
@@ -30,10 +40,21 @@ h1, h3 {
   margin: 30px;
 }
 
+h1 {
+  font-family: "parry-hotter";
+  font-size: 100px;
+  margin-top: 100px;
+}
+
+h3 {
+  font-family: "lumoslatino-font";
+  font-size: 40px;
+}
 #house-buttons {
   display: flex;
   justify-content: center;
-  background-color: lightgray;
+  margin: 50px;
+  font-family: "lumoslatino-font";
 }
 
 #house-form {
@@ -45,4 +66,48 @@ h1, h3 {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 50px;
+  background-color: lightgrey;
+  margin-bottom: 30px;
+  font-family: "lumoslatino-font";
+}
+
+#sorted-students {
+  font-family: "lumoslatino-font";
+}
+
+.btn {
+  margin: 20px;
+  background-color: lightgray;
+  width: 150px;
+}
+
+#gryffindor:hover {
+  background-color: maroon;
+  color: white;
+}
+
+#hufflepuff:hover {
+  background-color: goldenrod;
+  color: white;
+}
+
+#ravenclaw:hover {
+  background-color: royalblue;
+  color: white;
+}
+
+#slytherin:hover {
+  background-color: darkgreen;
+  color: white;
+}
+
+#all:hover {
+  background-color: darkgrey;
+  color: white;
+}
+
+#sort:hover {
+  background-color: darkred;
+  color: white;
 }
