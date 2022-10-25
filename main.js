@@ -49,6 +49,7 @@ const students = [
   },
 ]
 
+
 const showStudents = (divID, htmlToRender) => {
   const selectedDiv = document.querySelector(divID);
   selectedDiv.innerHTML = htmlToRender;
@@ -65,7 +66,7 @@ const studentCards = (students) => {
       <button class="btn btn-danger" id="delete--${student.id}">Move to the Dark Side</button>
     </div>
   </div>`;
-  };
+  }
   showStudents("#sorted-students", domString);
 }
 
@@ -139,3 +140,43 @@ slytherinButton.addEventListener("click", () => {
 allButton.addEventListener("click", () => {
   studentCards(students);
 })
+
+const form = document.querySelector('form');
+
+ const createStudent = (event) => {
+  event.preventDefault(); 
+
+  const newStudentObj = {
+    id: students.length + 1,
+    name: document.querySelector("#fullname").value,
+    image: document.querySelector("#image").value
+  }
+
+  console.log(newStudentObj);
+  students.push(newStudentObj);
+  studentCards(students);
+  form.reset();
+}
+
+form.addEventListener('submit', createStudent);
+
+const app = document.querySelector("#sorted-students");
+
+app.addEventListener('click', (e) => {
+ 
+  if (e.target.id.includes("delete")) {
+    const [, id] = e.target.id.split("--");
+
+    const index = students.findIndex(e => e.id === Number(id));
+    students.splice(index, 1);
+
+    studentCards(students);
+  }
+});
+
+// const startApp = () => {
+//   studentCards(students);
+//   events();
+// }
+
+// startApp();
