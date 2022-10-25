@@ -145,20 +145,37 @@ const form = document.querySelector('form');
 
  const createStudent = (event) => {
   event.preventDefault(); 
-
-  const newStudentObj = {
-    id: students.length + 1,
-    name: document.querySelector("#fullname").value,
-    image: document.querySelector("#image").value
+  const assignHouse = () => {
+    const assigned = Math.floor(Math.random() * 4 + 1);
+    switch(assigned) {
+      case 1: 
+        return 'Gryffindor'
+        break;
+      case 2:
+        return 'Hufflepuff'
+        break;
+      case 3:
+        return 'Ravenclaw'
+        break;
+      case 4:
+        return 'Slytherin'
+    }
   }
+    const newStudentObj = {
+      id: students.length + 1,
+      name: document.querySelector("#fullname").value,
+      house: assignHouse(),
+      imageUrl: document.querySelector("#image").value
+    }
+  
+    console.log(newStudentObj);
+    students.push(newStudentObj);
+    studentCards(students);
+    form.reset();
+  }
+ 
 
-  console.log(newStudentObj);
-  students.push(newStudentObj);
-  studentCards(students);
-  form.reset();
-}
-
-form.addEventListener('submit', createStudent);
+form.addEventListener('submit', createStudent)
 
 const app = document.querySelector("#sorted-students");
 
