@@ -49,6 +49,20 @@ const students = [
   },
 ]
 
+const darkSide = [
+  {
+    id: 1,
+    name: "Lucius Malfoy",
+    house: "Slytherin",
+    imageUrl: "https://www.giantbomb.com/a/uploads/original/0/3683/1110964-lucius_l.jpg"
+  },
+  {
+    id: 2,
+    name: "Bellatrix LeStrange",
+    house: "Slytherin",
+    imageUrl:"https://celebrityjacket.com/wp-content/uploads/2022/07/harry-potter-bellatrix-lestrange-costume.jpg"
+  }
+]
 
 const showStudents = (divID, htmlToRender) => {
   const selectedDiv = document.querySelector(divID);
@@ -58,12 +72,12 @@ const showStudents = (divID, htmlToRender) => {
 const studentCards = (students) => {
   let domString = "";
   for (const student of students) {
-    domString += `<div class="card" style="width: 18rem;">
+    domString += `<div class="card" style="width: 14rem;">
     <img src=${student.imageUrl} class="card-img-top" alt=${student.name}>
     <div class="card-body">
       <h5 class="card-title">${student.name}</h5>
       <p class="house-type ${student.house}">${student.house}</p>
-      <button class="btn btn-danger" id="delete--${student.id}">Move to the Dark Side</button>
+      <button class="btn btn-danger" id="delete--${student.id}">Expelled</button>
     </div>
   </div>`;
   }
@@ -71,6 +85,23 @@ const studentCards = (students) => {
 }
 
 studentCards(students);
+
+const darkCards = (darkSide) => {
+  let domString = "";
+  for (const darkArmy of darkSide) {
+    domString += `<div class="card" style="width: 14rem;">
+    <img src=${darkArmy.imageUrl} class="card-img-top" alt=${darkArmy.name}>
+    <div class="card-body">
+      <h5 class="card-title">${darkArmy.name}</h5>
+      <p class="house-type ${darkArmy.house}">${darkArmy.house}</p>
+      <button class="btn btn-danger" id="delete--${darkArmy.id}">Renounce</button>
+    </div>
+  </div>`;
+  }
+  showStudents("#dark-side", domString);
+}
+
+darkCards(darkSide);
 
 const filter = (array, houseName) => {
   const houseArray = [];
@@ -100,6 +131,18 @@ btn.addEventListener('click', () => {
 
 btn.addEventListener('click', () => {
   const cards = document.getElementById('sorted-students');
+
+  if (cards.style.display === 'none') {
+    // 👇️ this SHOWS the cards
+    cards.style.display = 'flex';
+  } else {
+    // 👇️ this HIDES the cards
+    cards.style.display = 'none';
+  }
+});
+
+btn.addEventListener('click', () => {
+  const cards = document.getElementById('dark-side');
 
   if (cards.style.display === 'none') {
     // 👇️ this SHOWS the cards
@@ -188,6 +231,18 @@ app.addEventListener('click', (e) => {
     students.splice(index, 1);
 
     studentCards(students);
+  }
+});
+
+app.addEventListener('click', (e) => {
+ 
+  if (e.target.id.includes("delete")) {
+    const [, id] = e.target.id.split("--");
+
+    const index = darkSide.findIndex(e => e.id === Number(id));
+    darkSide.splice(index, 1);
+
+    darkCards(darkSide);
   }
 });
 

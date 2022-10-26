@@ -17,14 +17,27 @@
   flex-wrap: wrap;
 }
 
+#dark-side {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.everyone {
+  display: flex;
+}
+
+.sorted {
+  flex: 1;
+}
 .card {
   flex: 0 1 30%;
   padding: 20px;
   margin: 30px;
+  height: fit-content;
 }
 
 img {
-  height: 650px;
+  height: 250px;
 }
 
 #form-appear {
@@ -57,6 +70,14 @@ h3 {
   font-family: "lumoslatino-font";
 }
 
+h5 {
+  height: 25px;
+  font-weight: bold;
+}
+
+p {
+  padding: 5px;
+}
 #house-form {
   display: flex;
   justify-content: center;
@@ -72,8 +93,13 @@ h3 {
   font-family: "lumoslatino-font";
 }
 
-#sorted-students {
+#sorted-students, #dark-side {
   font-family: "lumoslatino-font";
+  font-size: small;
+}
+
+.card-title {
+  font-size: 14px;
 }
 
 .btn {
@@ -110,4 +136,9 @@ h3 {
 #sort:hover {
   background-color: darkred;
   color: white;
+}
+
+.btn-danger {
+  width: 100px;
+  font-size: small;
 }
