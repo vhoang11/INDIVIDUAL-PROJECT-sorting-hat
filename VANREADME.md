@@ -24,7 +24,7 @@ https://www.loom.com/share/7e521f3014d94aa4bc185f16cb74f1df
 
 ## Project Screenshots 
 
-<img width="1148" alt="Your Alt" src="sorting-hat-screenshot.png">
+<img width="1148" alt="screenshott" src="sortinghatproject.png">
 
 ## Contributors
 - Van Hoang (https://github.com/vhoang11)
