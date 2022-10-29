@@ -22,8 +22,9 @@
   flex-wrap: wrap;
 }
 
-.everyone {
+#everyone {
   display: flex;
+  justify-content: space-between;
 }
 
 .sorted {
@@ -99,6 +100,8 @@ p {
 #sorted-students, #dark-side {
   font-family: "lumoslatino-font";
   font-size: small;
+  display: flex;
+  justify-content: center;
 }
 
 .card-title {
@@ -147,4 +150,13 @@ p {
 .btn-danger {
   width: 100px;
   font-size: small;
+}
+
+#each-side {
+  display: flex;
+  justify-content: space-around;
+}
+
+.army {
+  font-size: 30px;;
 }

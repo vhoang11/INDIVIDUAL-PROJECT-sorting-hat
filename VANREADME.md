@@ -1,37 +1,30 @@
-# This is the name of my Project  [![Netlify Status](https://api.netlify.com/api/v1/badges/4ab7e730-7ed3-4cfd-a988-66195e79a991/deploy-status)]
-<!-- update the netlify badge above with your own badge that you can find at netlify under settings/general#status-badges -->
+Sorting Hat Project
 
-Here I am putting an overview of what my project is about. It comes below the name of my project so that others can read what it is about and get more details.
+This project has a form to enter in student information to sort them into a house, and any expelled students move to the Dark Side.
 
-[View App](#your-link)
+https://soft-babka-1a9f0f.netlify.app/
 
-## Get Started <!-- OPTIONAL, but doesn't hurt -->
-PLACE CODE SNIPPET HERE
+## About the User 
+- The ideal user for this application is a student.
+- They want to know what house they will be sorted into.
 
-## About the User <!-- This is a scaled down user persona -->
-- The ideal user for this application is a teacher
-- They have students in their classrooms that they would like to put into random groups and they have a love and passion of Harry Potter
-- The problem this app solves for them is it allows them to get their students involved and excited about being in random groups. The students have felt that the groups have not been so random and based on favorites.
+## Features 
+- When a new student is submitted to the form they are added as an object to the student array.
+- They are randomly assigned to a house.
+- House buttons filter depending on what house each student is in.
+- If a student is expelled their card gets moved to the other array of Death Eaters.
 
-## Features <!-- List your app features using bullets! Do NOT use a paragraph. No one will read that! -->
-- When a new student is added an object should be created and that object should be pushed into an array of students that then prints to the DOM.
-- House Colors: The color of the student's card changes depending on which house they were sorted.
-- Card Ordering: Sort the student cards by some criteria (i.e. alphabetically by name, by house)
-- Voldermort's Army: Create a separate container of cards that hold the cards for students that have been expelled. These should be styled differently from Hogwarts students.
-
-## Video Walkthrough of APP NAME <!-- A loom link is sufficient -->
-https://www.loom.com/share/829b90d831ea441ba2db6bea724af210
+## Video Walkthrough of Sorting Hat Project
+https://www.loom.com/share/7e521f3014d94aa4bc185f16cb74f1df
 
 ## Relevant Links <!-- Link to all the things that are required outside of the ones that have their own section -->
-- [Check out the deployed site](#your-link)
-- [Wireframes](#your-link)
-- [Project Board](#your-link)
+- [Netlify] https://soft-babka-1a9f0f.netlify.app/
+- [Wireframe + Project Board](https://docs.google.com/presentation/d/1S9zR4qWtY-phIwWgEv_HBgBGZpaKF44fpS9WiK2_qFQ/edit#slide=id.g14de1b60d77_0_0)
 
-## Code Snippet <!-- OPTIONAL, but doesn't hurt -->
-PLACE CODE SNIPPET HERE
 
-## Project Screenshots <!-- These can be inside of your project. Look at the repos from class and see how the images are included in the readme -->
-<img width="1148" alt="Your Alt" src="your-link.png">
+## Project Screenshots 
+
+<img width="1148" alt="Your Alt" src="sorting-hat-screenshot.png">
 
 ## Contributors
-- [YOUR NAME](https://github.com/your-github-url)
+- Van Hoang (https://github.com/vhoang11)
