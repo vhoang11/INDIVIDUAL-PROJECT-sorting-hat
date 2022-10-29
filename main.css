@@ -27,8 +27,11 @@
 }
 
 .sorted {
+  display: flex;
   flex: 1;
+  align-content: flex-start;
 }
+
 .card {
   flex: 0 1 30%;
   padding: 20px;
@@ -102,6 +105,9 @@ p {
   font-size: 14px;
 }
 
+.card-img {
+  height: 500px;
+}
 .btn {
   margin: 20px;
   background-color: lightgray;

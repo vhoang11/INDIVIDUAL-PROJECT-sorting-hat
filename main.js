@@ -61,9 +61,23 @@ const darkSide = [
     name: "Bellatrix LeStrange",
     house: "Slytherin",
     imageUrl:"https://celebrityjacket.com/wp-content/uploads/2022/07/harry-potter-bellatrix-lestrange-costume.jpg"
+  },
+  {
+    id: 3,
+    name: "Peter Pettigrew",
+    house: "Gryffindor",
+    imageUrl:"https://qph.cf2.quoracdn.net/main-qimg-a82c7371225fca2c2432f3b09b8a7689.webp"
+  },
+  {
+    id: 4,
+    name: "Narcissa Malfoy",
+    house: "Slytherin",
+    imageUrl:"https://preview.redd.it/kbb0xafwckt61.jpg?auto=webp&s=7964281a5ac22989a443f7a447a1a72cf2645b62"
   }
 ]
 
+
+//cards to DOM
 const showStudents = (divID, htmlToRender) => {
   const selectedDiv = document.querySelector(divID);
   selectedDiv.innerHTML = htmlToRender;
@@ -123,11 +137,18 @@ btn.addEventListener('click', () => {
   if (form.style.display === 'none') {
     // 👇️ this SHOWS the form
     form.style.display = 'block';
-  } else {
-    // 👇️ this HIDES the form
-    form.style.display = 'none';
+  // } else {
+  //   // 👇️ this HIDES the form
+  //   form.style.display = 'none';
   }
 });
+
+const clickSubmit = (divID, htmlToRender) => {
+  const selectedDiv = document.querySelector(divID);
+  selectedDiv.innerHTML = htmlToRender;
+};
+
+
 
 btn.addEventListener('click', () => {
   const cards = document.getElementById('sorted-students');
@@ -220,31 +241,44 @@ const form = document.querySelector('form');
 
 form.addEventListener('submit', createStudent)
 
-const app = document.querySelector("#sorted-students");
 
-app.addEventListener('click', (e) => {
- 
-  if (e.target.id.includes("delete")) {
-    const [, id] = e.target.id.split("--");
+//delete buttons
+const moveToDarkSide = () => {
+  const sorted = document.querySelector("#sorted-students");
 
-    const index = students.findIndex(e => e.id === Number(id));
-    students.splice(index, 1);
+  sorted.addEventListener('click', (e) => {
+   
+    if (e.target.id.includes("delete")) {
+      const [, id] = e.target.id.split("--");
+  
+      const index = students.findIndex(e => e.id === Number(id));
+  
+      const deathEater =  students.splice(index, 1);
 
-    studentCards(students);
-  }
-});
+      darkSide.push(deathEater[0]);
+  
+      studentCards(students);
+      darkCards(darkSide);
+    }
+  });
+}
+moveToDarkSide();
 
-app.addEventListener('click', (e) => {
- 
-  if (e.target.id.includes("delete")) {
-    const [, id] = e.target.id.split("--");
+// const dark = document.querySelector("#dark-side");
 
-    const index = darkSide.findIndex(e => e.id === Number(id));
-    darkSide.splice(index, 1);
+// dark.addEventListener('click', (e) => {
 
-    darkCards(darkSide);
-  }
-});
+//   if (e.target.id.includes("delete")) {
+//     const [, id] = e.target.id.split("--");
+
+//     const index = darkSide.findIndex(e => e.id === Number(id));
+//     darkSide.splice(index, 1);
+
+//     darkCards(darkSide);
+//   }
+// });
+
+
 
 // const startApp = () => {
 //   studentCards(students);

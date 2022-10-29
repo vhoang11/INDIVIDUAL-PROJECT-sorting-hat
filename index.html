@@ -17,16 +17,19 @@
     <h3>Wondering what house you're in?</h3>
   </div>
     
-  <div id="sort-button">
-    <button type="button" id="sort" class="btn btn-sort" >Sorting Hat</button>
+  <div id="sort">
+    <div class="card bg-dark text-white">
+      <img src="https://hips.hearstapps.com/digitalspyuk.cdnds.net/16/27/1467979160-harry-potter-philosophers-sorting-hat.jpg" class="card-img" alt="sorting hat">
+      <div class="card-img-overlay">
+        <p class="card-text">Get sorted into your house!</p>
+      <button id="sort-me">Sort</button>
+      </div>
+    </div>
   </div>
 
   <div style = "Visibility = hidden">
     <form id="form1" method="post" action="" target="_parent" style="display:none">
       <div class="mb-3">
-        <img src="https://hips.hearstapps.com/digitalspyuk.cdnds.net/16/27/1467979160-harry-potter-philosophers-sorting-hat.jpg" alt="sorting hat photo"
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="enter-name" class="form-text"></div>
         <div class="form-floating mb-3">
           <input type="text" class="form-control" id="fullname" placeholder="Enter Full Name" required>
           <label for="floatingInput">Enter Full Name</label>
@@ -49,9 +52,15 @@
   </div>
   
   <div class="everyone">
-    <div style = "Visibility = hidden" id="sorted-students" method="post" action="" target="_parent" style="display:none" class="sorted good-side"></div>
+   
+    <div style = "Visibility = hidden" id="sorted-students" method="post" action="" target="_parent" style="display:none" class="sorted good-side">
+      
+    </div>
+  
+    <div style = "Visibility = hidden" id="dark-side" method="post" action="" target="_parent" style="display:none" class="sorted bad-side">
+      <h1>Death Eater's</h1>
+    </div>
     
-    <div style = "Visibility = hidden" id="dark-side" method="post" action="" target="_parent" style="display:none" class="sorted bad-side"></div>
   </div>
    
   
